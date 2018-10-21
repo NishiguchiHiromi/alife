@@ -1,0 +1,18 @@
+.container{
+    width: 90%;
+    margin: auto;
+
+    .field{
+        margin: auto;
+        border: solid 2px;
+        position: relative;
+    
+        .alife{
+            position: absolute;
+        }
+    }
+
+    .setting{
+        margin: 10px
+    }
+}

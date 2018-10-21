@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="field" [ngStyle]="field.fieldStyle">
+    <span class="alife" [ngStyle]="alife.alifeStyle" *ngFor="let alife of field.alives">●</span>
+  </div>
+  <br><br>
+  <div>
+    <div>
+      <span class="setting"><button (click)="start()">start</button></span>
+      <span class="setting"><button (click)="stop()">stop</button></span>
+      <span class="setting"><span>time speed</span><input type="number" [(ngModel)]="field.timeSpeed" (change)="start()"></span>
+      <span class="setting"><span>move speed</span><input type="number" [(ngModel)]="field.moveSpeed"></span>
+    </div>
+    <div>
+      <span class="setting"><span>width</span><input type="number" [(ngModel)]="field.fieldWidth"></span>
+      <span class="setting"><span>height</span><input type="number" [(ngModel)]="field.fieldHeight"></span>
+    </div>
+    <div>
+      <span class="setting"><button (click)="create(createNum.value)">create</button><input type="number" #createNum></span>
+      <span class="setting"><button (click)="extinguish()">extinguish</button></span>
+    </div>
+    <div>
+      <span class="setting">maleNum：{{maleNum}}</span>
+      <span class="setting">femaleNum：{{femaleNum}}</span>
+    </div>
+  </div>
+</div>
